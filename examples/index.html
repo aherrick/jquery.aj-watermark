@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>aj</title>
+    <script src="jquery-1.6.3.min.js"></script>
+    <script src="../jquery.aj-watermark.min.js"></script>
+    <style>
+        .watermark
+        {
+            color: #999;
+        }
+        
+        .red
+        {
+            color: #cc0000;
+        }
+    </style>
+    <script>
+
+        $(function () {
+
+            // default
+            $('#example1').watermark();
+
+            // text defined
+            $('#example2').watermark({
+                txt: 'watermark your input'
+            });
+
+            // text and cssclass defined
+            $('#example3').watermark({
+
+                txt: 'red watermark',
+                cssclass: 'red'
+            });
+        });
+    </script>
+</head>
+<body>
+    <label for="example1">default:</label>
+    <input type="text" id="example1" />
+    <br />
+    <br />
+    <label for="example1">text defined:</label>
+    <input type="text" id="example2" />
+    <br />
+    <br />
+    <label for="example1">text and cssclass defined:</label>
+    <input type="text" id="example3" />
+</body>
+</html>
